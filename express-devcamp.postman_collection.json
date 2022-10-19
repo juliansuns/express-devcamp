@@ -103,7 +103,7 @@
 					"response": []
 				},
 				{
-					"name": "Traer Bootcamps por ID",
+					"name": "Traer course por ID",
 					"request": {
 						"method": "GET",
 						"header": []

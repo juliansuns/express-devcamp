@@ -8,6 +8,7 @@ const listEndpoint = require('express-list-endpoints')
 //Los componentes de rutas
 
 const bootcampRoutes =require('./routes/BootcampRoutes')
+const courseRoutes = require('./routes/CoursesRoutes')
 //3. Establecer archivo de configuracion
 dotenv.config({
     path:'./config/config.env'
@@ -21,6 +22,7 @@ const app = express()
 
 //Rutas del proyecto
 app.use('/api/v1/bootcamps', bootcampRoutes)
+app.use('/api/v1/courses',courseRoutes)
 // endpoint de aplicacion
 app.get('/' , (request, response) => {
     response
@@ -31,6 +33,7 @@ app.get('/' , (request, response) => {
         })
         send('Ruta funcional')
 })
+
 
 //endpoints de dominio
 //bootcamps
